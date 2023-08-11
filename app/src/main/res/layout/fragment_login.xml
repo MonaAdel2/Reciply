@@ -4,10 +4,8 @@
     android:id="@+id/framLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/Background_color"
     tools:context="com.reciply.authentication.login.view.LoginFragment">
-
-
 
 
     <TextView
@@ -21,6 +19,7 @@
         android:textColor="@color/Green_700"
         android:textSize="34sp"
         android:textStyle="bold"
+        android:fontFamily="@font/quicksand_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,30 +27,45 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtlayout_Email_login"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
-        android:textColorHint="@color/Green_700"
-        app:hintTextColor="@color/black"
+        android:elevation="@dimen/elevation"
+        android:textColorHint="@color/Gray_400"
+        android:theme="@style/EditTextThemeOverlay"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="@dimen/corner_radius"
+        app:boxCornerRadiusBottomStart="@dimen/corner_radius"
+        app:boxCornerRadiusTopEnd="@dimen/corner_radius"
+        app:boxCornerRadiusTopStart="@dimen/corner_radius"
+        app:boxStrokeColor="@color/Green_700"
+        app:boxStrokeWidth="0dp"
+        app:endIconMode="clear_text"
+        app:helperTextTextAppearance="@color/Green_700"
+        app:hintTextAppearance="@color/Green_700"
+        app:hintTextColor="@color/Green_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Txt_Login"
-        app:startIconDrawable="@drawable/baseline_email_24">
+        app:startIconDrawable="@drawable/baseline_email_24"
+        app:startIconTint="@color/Gray_400">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtInput_Email_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
-            android:isScrollContainer="false"
-            android:shadowColor="@color/black"
-            android:textColor="#0C0C0C"
-            android:textColorHint="@color/Green_700"
             android:imeOptions="actionNext"
+            android:inputType="text"
+            android:isScrollContainer="false"
             android:maxLines="1"
-            android:inputType="text"/>
+            android:shadowColor="@color/black"
+            android:textColorHint="@color/Green_700"
+            android:textCursorDrawable="@drawable/edit_text_cursor_color"
+            android:textSelectHandle="@color/Green_700" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -62,12 +76,26 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
-        android:textColorHint="@color/Green_700"
-        app:hintTextColor="@color/black"
+        android:elevation="@dimen/elevation"
+        android:textColorHint="@color/Gray_400"
+        android:theme="@style/EditTextThemeOverlay"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="@dimen/corner_radius"
+        app:boxCornerRadiusBottomStart="@dimen/corner_radius"
+        app:boxCornerRadiusTopEnd="@dimen/corner_radius"
+        app:boxCornerRadiusTopStart="@dimen/corner_radius"
+        app:boxStrokeColor="@color/Green_700"
+        app:boxStrokeWidth="0dp"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/Gray_400"
+        app:helperTextTextAppearance="@color/Green_700"
+        app:hintTextAppearance="@color/Green_700"
+        app:hintTextColor="@color/Green_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtlayout_Email_login"
-        app:startIconDrawable="@drawable/baseline_password_24">
+        app:startIconDrawable="@drawable/baseline_password_24"
+        app:startIconTint="@color/Gray_400">
 
         <EditText
             android:id="@+id/txtInput_Password_Login"
@@ -76,9 +104,11 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="@string/password"
+            android:imeOptions="actionDone"
             android:inputType="textPassword"
             android:textColorHint="@color/Green_700"
-            android:imeOptions="actionDone"/>
+            android:textCursorDrawable="@drawable/edit_text_cursor_color"
+            android:textSelectHandle="@color/Green_700" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -92,6 +122,7 @@
         android:backgroundTint="@color/Green_700"
         android:text="@string/login"
         android:textSize="24sp"
+        android:fontFamily="@font/quicksand_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtlayout_password_login" />
@@ -103,8 +134,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="35dp"
         android:text="@string/don_t_have_account"
-        android:textColor="@color/Green_700"
-        android:textSize="20sp"
+        android:textColor="@color/Gray_400"
+        android:textSize="18sp"
+        android:fontFamily="@font/quicksand_semibold"
+        app:layout_constraintEnd_toStartOf="@+id/txt_clickToRegister_Login"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
@@ -115,11 +150,12 @@
         android:layout_marginStart="5dp"
         android:layout_marginEnd="16dp"
         android:text="@string/create_a_new_account"
-        android:textColor="#0A5D83"
+        android:textColor="@color/Green_700"
         android:textSize="16sp"
+        android:fontFamily="@font/quicksand_semibold"
         app:layout_constraintBaseline_toBaselineOf="@+id/txt_noAcc_login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/txt_noAcc_login" />
 
     <ImageView
