@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ReciplyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/Green_700</item>
+        <item name="actionOverflowButtonStyle">@style/ThreeDotColor</item>
+    </style>
+
+    <style name="Theme.ReciplyApplication" parent="Base.Theme.ReciplyApplication" />
+
+    <style name="fav_checkbox" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorControlNormal">@color/white</item>   <!-- normal border color change as you wish -->
+        <item name="colorControlActivated">@color/white</item> <!-- activated color change as you wish -->
+        <item name="android:textColor">@color/Green_400</item> <!-- checkbox text color -->
+    </style>
+
+    <style name="EditTextThemeOverlay" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">@color/Green_700</item>
+    </style>
+
+    <style name="HelperTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/Green_700</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+<style name="OptionMenuText" parent="android:TextAppearance.Widget.PopupMenu.Small">
+    <item name="android:textColor">@color/Green_800</item>
+</style>
+    <style name="colorofOptionMenu" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="ImageView.Corner" parent="">
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomLeft">55dp</item>
+        <item name="cornerSizeBottomRight">55dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+    <style name="ThreeDotColor" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="tint">@color/Green_700</item>
+    </style>
+</resources>
