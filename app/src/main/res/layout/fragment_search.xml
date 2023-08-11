@@ -38,8 +38,7 @@
         app:hintTextAppearance="@color/Green_700"
         app:boxStrokeColor="@color/Green_700"
         android:theme="@style/EditTextThemeOverlay"
-        app:hintTextColor="@color/Green_700"
-        >
+        app:hintTextColor="@color/Green_700">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
