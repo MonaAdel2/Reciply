@@ -42,8 +42,8 @@ https://github.com/MonaAdel2/Reciply/assets/96449268/aab79658-8b7e-460b-86e1-3d7
 $ git clone https://github.com/MonaAdel2/Reciply
 ```
 
-**Dependencies**
-# Install the following dependencies
+# Dependencies
+**Install the following dependencies**</br></br>
 Retrofit API:
 ```bash
     implementation "com.google.code.gson:gson:2.10.1"
