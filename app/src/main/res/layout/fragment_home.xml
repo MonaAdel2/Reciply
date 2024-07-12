@@ -115,7 +115,6 @@
             android:fontFamily="@font/quicksand_bold"
             android:paddingTop="10dp"
             android:text="@string/all_recipes"
-            android:textColor="@color/black"
             android:textSize="20sp" />
 <RelativeLayout
     android:layout_width="match_parent"

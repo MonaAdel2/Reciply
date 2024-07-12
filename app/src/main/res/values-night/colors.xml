@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Green_700">#3E844E</color>
+    <color name="Background_color">#1C1C1C</color>
+    <color name="Gray_500">#F0F0F0</color>
+    <color name="containers">#101010</color>
+    <color name="buttonTextColor">#FFFFFF</color>
+</resources>

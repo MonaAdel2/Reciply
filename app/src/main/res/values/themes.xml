@@ -38,4 +38,9 @@
     <style name="ThreeDotColor" parent="Widget.AppCompat.ActionButton.Overflow">
         <item name="tint">@color/Green_700</item>
     </style>
+
+    <style name="CustomButton">
+        <item name="android:textColor">@color/buttonTextColor</item>
+    </style>
+
 </resources>
