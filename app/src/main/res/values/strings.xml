@@ -28,6 +28,8 @@ Also user can have an account to save his favorite recipes and log in is require
     <string name="create_a_new_account">Create a new account</string>
     <string name="meal_name">Meal Name</string>
     <string name="meal_category">Meal Category</string>
+    
+    <string name="guest">Continue as a guest</string>
 </resources>
 
 <!--😋-->

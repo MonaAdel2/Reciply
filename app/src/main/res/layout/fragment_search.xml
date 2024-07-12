@@ -27,7 +27,7 @@
         app:startIconDrawable="@drawable/baseline_search_24"
         android:textColorHint="@color/Gray_400"
         android:hint="@string/search_hint"
-        app:boxBackgroundColor="@color/white"
+        app:boxBackgroundColor="@color/containers"
         app:boxCornerRadiusBottomEnd="@dimen/corner_radius"
         app:boxCornerRadiusBottomStart="@dimen/corner_radius"
         app:boxCornerRadiusTopEnd="@dimen/corner_radius"

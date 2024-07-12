@@ -89,7 +89,8 @@ class RecipeDetailFragment : Fragment() {
         val video_id = getVideoId(recipy.strYoutube)
 
         // new code
-       checkIsFav(recipy)
+        checkIsFav(recipy)
+        checkIfGuest()
 
 
         video.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
@@ -204,6 +205,13 @@ class RecipeDetailFragment : Fragment() {
             }
         }
         return null
+    }
+
+    private fun checkIfGuest() {
+        val isGuest = sharedPreferences.getBoolean("isGuest", false)
+        if (isGuest){
+            favCheckBox.isClickable = false
+        }
     }
 }
 

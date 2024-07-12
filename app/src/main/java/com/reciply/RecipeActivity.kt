@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
@@ -74,7 +75,15 @@ class RecipeActivity : AppCompatActivity() {
     private fun setupBottomNavigation(){
         bottomNavigation.setOnClickMenuListener {
                 when(it.id){
-                    1->navController.navigate(R.id.favoriteFragment)
+                    1->{
+                        val sharedPreferences = this.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+                        val isGuest = sharedPreferences.getBoolean("isGuest", false)
+                        if (isGuest){
+                            navController.navigate(R.id.guestFragment)
+                        }else{
+                            navController.navigate(R.id.favoriteFragment)
+                        }
+                    }
                     2->navController.navigate(R.id.homeFragment)
                     3->navController.navigate(R.id.searchFragment)
                 }

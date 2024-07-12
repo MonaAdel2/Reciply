@@ -47,4 +47,9 @@
         android:name="com.reciply.aboutUs.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/guestFragment"
+        android:name="com.reciply.GuestFragment"
+        android:label="fragment_guest"
+        tools:layout="@layout/fragment_guest" />
 </navigation>

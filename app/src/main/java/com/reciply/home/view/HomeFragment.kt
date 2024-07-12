@@ -24,8 +24,7 @@ import com.reciply.home.viewmodel.HomeVMFactory
 
 
 class HomeFragment : Fragment() {
-    val data: List<Meal> = arrayListOf(
-    )
+    val data: List<Meal> = arrayListOf()
 
     private lateinit var rv: RecyclerView
     private lateinit var viewModel: HomeViewModel

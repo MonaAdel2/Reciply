@@ -44,6 +44,8 @@ class LoginFragment : Fragment() {
         val emailTextInput = rootView.findViewById<EditText>(R.id.txtInput_Email_login)
         val passwordTextInput = rootView.findViewById<EditText>(R.id.txtInput_Password_Login)
 
+        val tvGuest = rootView.findViewById<TextView>(R.id.tv_guest_login)
+
         goToRegistration.setOnClickListener {
             val action = LoginFragmentDirections.actionLoginFragment2ToRegisterFragment2()
             findNavController().navigate(action)
@@ -51,6 +53,18 @@ class LoginFragment : Fragment() {
 
         loginButton.setOnClickListener {
             validateAndPerformLogin(emailTextInput.text.toString().trim(), passwordTextInput.text.toString(), emailTextLayout, passwordTextLayout)
+        }
+
+        // the guest accessiablity
+        tvGuest.setOnClickListener {
+            // add to the shared prefs that this is a guest
+            val sharedPreferences = requireContext().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.putBoolean("isGuest", true)
+            editor.apply()
+
+            val intent = Intent(requireActivity(), RecipeActivity::class.java)
+            activity?.startActivity(intent)
         }
     }
 
@@ -97,6 +111,7 @@ class LoginFragment : Fragment() {
         val editor = sharedPreferences.edit()
         editor.putInt("userId", userId ?: -1)
         editor.putBoolean("isUserLoggedIn", true)
+        editor.putBoolean("isGuest", false)
         editor.apply()
 
         if (userId != null) {
